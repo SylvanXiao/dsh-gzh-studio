@@ -1,0 +1,5 @@
+# gzh-agent 组合包 patch 层：把插件行插入 base 配置
+# name 必须与 package.json 的 name 一致，launcher 据此从 profile node_modules 解析模块
+- insert:
+    - id: gzh-agent
+      name: gzh-agent

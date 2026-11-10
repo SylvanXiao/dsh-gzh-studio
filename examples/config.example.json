@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "note": "示例骨架。voice / stance / rules 等账号专属字段请自行填写，不要把别人的规则文件当通用配置。",
+  "paths": {
+    "workspace": "./workspace",
+    "pipeline": "./studio/state/pipeline.json",
+    "engine": "./gzh-agent",
+    "python": "python",
+    "edge": "msedge"
+  },
+  "topic_scope": {
+    "account": "<YOUR_ACCOUNT>",
+    "positioning": "<YOUR_POSITIONING>",
+    "sources": [
+      "<YOUR_RSS_FEED>"
+    ],
+    "categories": [
+      "AI工具"
+    ],
+    "candidates_per_run": 6,
+    "dedup_days": 7,
+    "require_source_url": true
+  },
+  "llm": {
+    "provider": "host",
+    "model": "<HOST_MODEL>",
+    "max_tokens": 4096,
+    "temperature": 0.7
+  },
+  "content_spec": {
+    "voice": "<YOUR_VOICE>",
+    "stance": "<YOUR_STANCE>",
+    "format": {
+      "font_inline": "'Microsoft YaHei','PingFang SC',sans-serif",
+      "block_bg": "#ffffff",
+      "img_embed": "base64",
+      "cover": "3:2",
+      "infographic_ratio": "3:2"
+    }
+  },
+  "delivery": {
+    "enabled": true,
+    "at": "09:00",
+    "max_per_day": 1,
+    "wake_model": false
+  },
+  "progress": {
+    "enabled": true,
+    "mode": "surface_replace",
+    "throttle_ms": 800,
+    "notify_on_finish": true
+  },
+  "reader_gate": {
+    "enabled": true,
+    "questions": [
+      "能不能全自动运行",
+      "运行结果怎么样",
+      "我能不能用",
+      "如何使用"
+    ]
+  }
+}
